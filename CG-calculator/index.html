@@ -271,7 +271,7 @@ var maps = ["Forsaken Crypt", "Serenity Rest", "Dustreach Chasm", "Rattlebone Ro
 "Mount Virethorn", "Treetop Uprise", "Shimmering Ridge", "Ravenous Ravine", "Pebbletown",
 "Volcanic Ascent", "Point Blue", "Tempest Cliffside", "Heaven Piercing Highrise", "Snowveil",
 "Highland Cliffside", "Briar Heights", "Frozen Pillar", "Iced Ravine Trail", "Corroded Lookout",
-"Rusted Railways", "Cliff Westir"];
+"Rusted Railways", "Frigid Caverns", "Towering Stalagmites", "Cliff Westir"];
 var rewards = [
 [[1540],[2860],[4400,7700,11550,14438,25266]],
 [[327],[607],[933,1633,2449,3061,5357]],
@@ -304,12 +304,14 @@ var rewards = [
 [[2310],[4291],[6601,11551,17326,21657,37899]],
 [[154],[287],[441,771,1156,1444,2527]],
 [[455],[845],[1300,2274,3411,4263,7460]],
-[[3850],[7150],[11000,19250,28875,36094,63165]],
+[[3658],[6793],[10450,18288,27432,34290,60006]],
 [[1033],[1917],[2950,5161,7742,9677,16935]],
 [[1139],[2115],[3254,5695,8542,10677,18684]],
 [[715],[1328],[2042,3573,5360,6700,11724]],
 [[931],[1729],[2660,4655,6982,8728,15274]],
-[[1408],[2615],[4022,7038,10557,13196,23093]]];
+[[899],[1669],[2567,4492,6737,8421,14737]],
+[[931],[1729],[2660,4655,6982,8728,15274]],
+[[1370],[2543],[3912,6846,10268,12835,22462]]];
 
 function print(s){document.getElementById("RES").value += s + "\n";}
 function flush(){document.getElementById("RES").value = "";}
@@ -324,8 +326,8 @@ function f(){
     var tot = document.getElementById("TOT").checked
     var fet = document.getElementById("Fetish").checked
     var v = y - x + 1
-    if (v > 100000){print("Difference between X and Y too large (over 100k)");return;}
-    if (v < 0){print("Difference between Y is smaller than X");return;}
+    if (v > 100000){print("Difference between target and current too large (over 100k)");return;}
+    if (v < 0){print("Difference between current is smaller than target");return;}
     var res = []
     for (var i = 0; i < v; i++){res.push([]);}
     for (var i = 0; i < 3; i++){
@@ -368,3 +370,4 @@ function f(){
 
 </body>
 </html>
+
