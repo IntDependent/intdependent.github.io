@@ -364,7 +364,7 @@ function f(){
             if(!pd.has(path[i])) pd.set(path[i],1)
             pd.set(path[i],pd.get(path[i])+1)
         }
-        pd.forEach(function(value,key,map){print(key+' * '+value)})
+        pd.forEach(function(value,key,map){print(key+' * '+(value - 1))})
     } else {print("Impossible :c");}
 }
 </script>
